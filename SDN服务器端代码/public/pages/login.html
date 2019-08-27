@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>登录页面</title>
+  <link type="text/css" href="../css/login.css" rel="stylesheet" />
+  <link rel="icon" href="/icons/browserLogo.ico">"
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+  </script>
+
+
+  <script>
+    function checkpwd() {
+      var a = $("#userName").val();
+      var b = $("#password").val();
+
+      $.ajax({
+        type: "post",
+        url: "http://localhost:3000/login",
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify({
+          "userName": a,
+          "password": b
+        }),
+        dataType: "json",
+        success: function (data) {
+          localStorage.setItem("key", data.key);
+          window.location.href = data.url;
+        }
+      });
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <img src="../images/topo.png" id="frontpage">
+    <div class="login">
+      <div class="header">RNVS</div>
+      <form>
+        <ul>
+          <li>
+            <div class="text">
+              <span class="iconfont">&#xe501;</span>
+              <input type="text" placeholder="请输入用户名" id="userName">
+            </div>
+          </li>
+          <li>
+            <div class="password">
+              <span class="iconfont">&#xe613;</span>
+              <input type="password" placeholder="••••••••••••••" id="password">
+            </div>
+          </li>
+          <li class="remember">
+            <input type="checkbox">Remember Me
+          </li>
+          <li>
+            <a>Forgot username or password?</a>
+          </li>
+
+          <li>
+            <a>Haven't had an account yet?</a>
+          </li>
+
+          <li>
+            <input type="button" value="Login" onclick="checkpwd()">
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

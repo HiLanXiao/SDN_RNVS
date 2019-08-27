@@ -1,0 +1,278 @@
+{
+  "textObject": {
+    "links": [
+      {
+        "flowLinks": [
+          [
+            "h10",
+            "s8",
+            "s3",
+            "s9",
+            "h7"
+          ],
+          [
+            "h10",
+            "s8",
+            "s3",
+            "s9",
+            "s1",
+            "s4",
+            "h1"
+          ],
+          [
+            "h9",
+            "s8",
+            "s3",
+            "s9",
+            "s1",
+            "s4",
+            "h1"
+          ],
+          [
+            "h9",
+            "s8",
+            "s3",
+            "s6",
+            "h3"
+          ],
+          [
+            "h9",
+            "s8",
+            "s3",
+            "s9",
+            "h7"
+          ]
+        ],
+        "count": 5
+      },
+      [
+        {
+          "device1": "s5",
+          "device2": "s4"
+        },
+        {
+          "device1": "s3",
+          "device2": "s8"
+        },
+        {
+          "device1": "s7",
+          "device2": "s6"
+        },
+        {
+          "device1": "s1",
+          "device2": "s6"
+        },
+        {
+          "device1": "s5",
+          "device2": "s1"
+        },
+        {
+          "device1": "s3",
+          "device2": "s6"
+        },
+        {
+          "device1": "s3",
+          "device2": "s7"
+        },
+        {
+          "device1": "s3",
+          "device2": "s1"
+        },
+        {
+          "device1": "s3",
+          "device2": "s9"
+        },
+        {
+          "device1": "s1",
+          "device2": "s9"
+        },
+        {
+          "device1": "s1",
+          "device2": "s4"
+        },
+        {
+          "device1": "s7",
+          "device2": "s1"
+        },
+        {
+          "device1": "s4",
+          "device2": "h1"
+        },
+        {
+          "device1": "s4",
+          "device2": "h2"
+        },
+        {
+          "device1": "s6",
+          "device2": "h3"
+        },
+        {
+          "device1": "s6",
+          "device2": "h4"
+        },
+        {
+          "device1": "s7",
+          "device2": "h5"
+        },
+        {
+          "device1": "s7",
+          "device2": "h6"
+        },
+        {
+          "device1": "s9",
+          "device2": "h7"
+        },
+        {
+          "device1": "s9",
+          "device2": "h8"
+        },
+        {
+          "device1": "s8",
+          "device2": "h9"
+        },
+        {
+          "device1": "s8",
+          "device2": "h10"
+        },
+        {
+          "device1": "s5",
+          "device2": "h11"
+        },
+        {
+          "device1": "s5",
+          "device2": "h12"
+        }
+      ],
+      []
+    ],
+    "devices": [
+      {
+        "tag": "s1",
+        "type": "switcherNormal",
+        "x": 704.26,
+        "y": 350.12
+      },
+      {
+        "tag": "s3",
+        "type": "switcherNormal",
+        "x": 866.99,
+        "y": 465.27
+      },
+      {
+        "tag": "s2",
+        "type": "switcherNormal",
+        "x": 923.03,
+        "y": 350.28
+      },
+      {
+        "tag": "s4",
+        "type": "switcherNormal",
+        "x": 445.63,
+        "y": 176.66
+      },
+      {
+        "tag": "s6",
+        "type": "switcherNormal",
+        "x": 462.71,
+        "y": 437.89
+      },
+      {
+        "tag": "s7",
+        "type": "switcherNormal",
+        "x": 669.5,
+        "y": 411.7
+      },
+      {
+        "tag": "s5",
+        "type": "switcherNormal",
+        "x": 927.82,
+        "y": 276.88
+      },
+      {
+        "tag": "s8",
+        "type": "switcherNormal",
+        "x": 1020.43,
+        "y": 520.27
+      },
+      {
+        "tag": "s9",
+        "type": "switcherNormal",
+        "x": 1102.54,
+        "y": 452.33
+      },
+      {
+        "tag": "h1",
+        "type": "pcNormal",
+        "x": 250.84,
+        "y": 186.29
+      },
+      {
+        "tag": "h2",
+        "type": "pcNormal",
+        "x": 145.05,
+        "y": 230.23
+      },
+      {
+        "tag": "h3",
+        "type": "pcNormal",
+        "x": 315.27,
+        "y": 341.28
+      },
+      {
+        "tag": "h4",
+        "type": "pcNormal",
+        "x": 354.53,
+        "y": 498.68
+      },
+      {
+        "tag": "h6",
+        "type": "pcNormal",
+        "x": 680.28,
+        "y": 534.49
+      },
+      {
+        "tag": "h11",
+        "type": "pcNormal",
+        "x": 1036.01,
+        "y": 299.45
+      },
+      {
+        "tag": "h7",
+        "type": "serverNormal",
+        "x": 1242.79,
+        "y": 204.05
+      },
+      {
+        "tag": "h8",
+        "type": "serverNormal",
+        "x": 1278.45,
+        "y": 356.63
+      },
+      {
+        "tag": "h12",
+        "type": "cameraNormal",
+        "x": 987.16,
+        "y": 188.4
+      },
+      {
+        "tag": "h5",
+        "type": "cameraNormal",
+        "x": 551.72,
+        "y": 488.14
+      },
+      {
+        "tag": "h9",
+        "type": "cameraNormal",
+        "x": 945.5,
+        "y": 579.94
+      },
+      {
+        "tag": "h10",
+        "type": "cameraNormal",
+        "x": 1081.26,
+        "y": 597.69
+      }
+    ],
+    "updatingNumber": 14
+  }
+}

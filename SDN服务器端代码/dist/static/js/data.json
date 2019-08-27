@@ -1,0 +1,291 @@
+{
+    "htconfig": {
+        "Style": {
+            "edge.color": "black",
+            "edge.width": 2,
+            "flow": true,
+            "edge.offset": 0,
+            "flow.element.background": "#21a675",
+            "flow.element.count": 5,
+            "flow.count": 0,
+            "flow.step": 3,
+            "flow.element.max": 10,
+            "flow.element.shadow.visible": false
+        }
+    },
+    "textObject": {
+        "devices": [{
+                "tag": "s1",
+                "type": "switcherNormal",
+                "x": 704.26,
+                "y": 321.12
+            },
+            {
+                "tag": "s2",
+                "type": "switcherNormal",
+                "x": 866.99,
+                "y": 465.27
+            },
+            {
+                "tag": "s3",
+                "type": "switcherNormal",
+                "x": 923.03,
+                "y": 372.28
+            },
+            {
+                "tag": "s4",
+                "type": "switcherNormal",
+                "x": 445.63,
+                "y": 176.66
+            },
+            {
+                "tag": "s5",
+                "type": "switcherNormal",
+                "x": 462.71,
+                "y": 437.89
+            },
+            {
+                "tag": "s6",
+                "type": "switcherNormal",
+                "x": 669.50,
+                "y": 411.70
+            },
+            {
+                "tag": "s7",
+                "type": "switcherNormal",
+                "x": 927.82,
+                "y": 276.88
+            },
+            {
+                "tag": "s8",
+                "type": "switcherNormal",
+                "x": 1020.43,
+                "y": 496.27
+            },
+            {
+                "tag": "s9",
+                "type": "switcherNormal",
+                "x": 1102.54,
+                "y": 452.33
+            },
+            {
+                "tag": "p1",
+                "type": "pcNormal",
+                "x": 250.84,
+                "y": 186.29
+            },
+            {
+                "tag": "p2",
+                "type": "pcNormal",
+                "x": 145.05,
+                "y": 230.23
+            },
+            {
+                "tag": "p3",
+                "type": "pcNormal",
+                "x": 315.27,
+                "y": 341.28
+            },
+            {
+                "tag": "p4",
+                "type": "pcNormal",
+                "x": 354.53,
+                "y": 498.68
+            },
+            {
+                "tag": "p5",
+                "type": "pcNormal",
+                "x": 680.28,
+                "y": 534.49
+            },
+            {
+                "tag": "p6",
+                "type": "pcNormal",
+                "x": 1036.01,
+                "y": 299.45
+            },
+            {
+                "tag": "se1",
+                "type": "serverNormal",
+                "x": 1242.79,
+                "y": 204.05
+            },
+            {
+                "tag": "se2",
+                "type": "serverNormal",
+                "x": 1278.45,
+                "y": 356.63
+            },
+            {
+                "tag": "c1",
+                "type": "cameraNormal",
+                "x": 987.16,
+                "y": 188.40
+            },
+            {
+                "tag": "c2",
+                "type": "cameraNormal",
+                "x": 551.72,
+                "y": 488.14
+            },
+            {
+                "tag": "c3",
+                "type": "cameraNormal",
+                "x": 945.50,
+                "y": 579.94
+            },
+            {
+                "tag": "c4",
+                "type": "cameraNormal",
+                "x": 1081.26,
+                "y": 597.69
+            }
+        ],
+    
+        "links": [
+            {
+                "flowLinks": ["c1", "s7", "s3", "s2", "s6", "p5"],
+                "count": 3
+            },
+    
+            [
+                {
+                    "device1": "p1",
+                    "device2": "s4"
+                },
+                {
+                    "device1": "p2",
+                    "device2": "s4"
+                },
+                {
+                    "device1": "p3",
+                    "device2": "s5"
+                },
+                {
+                    "device1": "p4",
+                    "device2": "s5"
+                },
+                {
+                    "device1": "c2",
+                    "device2": "s6"
+                },
+                {
+                    "device1": "p5",
+                    "device2": "s6"
+                },
+                {
+                    "device1": "c3",
+                    "device2": "s8"
+                },
+                {
+                    "device1": "c4",
+                    "device2": "s8"
+                },
+                {
+                    "device1": "se1",
+                    "device2": "s9"
+                },
+                {
+                    "device1": "se2",
+                    "device2": "s9"
+                },
+                {
+                    "device1": "p6",
+                    "device2": "s7"
+                },
+                {
+                    "device1": "c1",
+                    "device2": "s7"
+                },
+    
+                {
+                    "device1": "s1",
+                    "device2": "s2"
+                },
+                {
+                    "device1": "s1",
+                    "device2": "s3"
+                },
+                {
+                    "device1": "s1",
+                    "device2": "s4"
+                },
+                {
+                    "device1": "s1",
+                    "device2": "s5"
+                },
+                {
+                    "device1": "s1",
+                    "device2": "s6"
+                },
+                {
+                    "device1": "s1",
+                    "device2": "s7"
+                },
+    
+                {
+                    "device1": "s2",
+                    "device2": "s3"
+                },
+                {
+                    "device1": "s2",
+                    "device2": "s5"
+                },
+                {
+                    "device1": "s2",
+                    "device2": "s6"
+                },
+                {
+                    "device1": "s2",
+                    "device2": "s8"
+                },
+                {
+                    "device1": "s2",
+                    "device2": "s9"
+                },
+    
+    
+                {
+                    "device1": "s3",
+                    "device2": "s4"
+                },
+                {
+                    "device1": "s3",
+                    "device2": "s7"
+                },
+                {
+                    "device1": "s3",
+                    "device2": "s8"
+                },
+                {
+                    "device1": "s3",
+                    "device2": "s9"
+                },
+    
+                {
+                    "device1": "s4",
+                    "device2": "s7"
+                },
+                {
+                    "device1": "s5",
+                    "device2": "s6"
+                }
+    
+            ],
+    
+            [{
+                    "device1": "s1",
+                    "device2": "s6"
+                },
+                {
+                    "device1": "s3",
+                    "device2": "s4"
+                },
+                {
+                    "device1": "s3",
+                    "device2": "s8"
+                }
+            ]
+        ]
+    }
+}

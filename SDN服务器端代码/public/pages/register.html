@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>注册</title>
+    <link type="text/css" href="../css/register.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        
+        $(document).ready(function(){
+
+            $("#name2").focusout(function(){
+                
+                var n2 = $("#name2").val();
+
+                if(n2.length != 0){
+                    if(n2.length < 6 || n2.length > 12){
+                        alert("用户名至少6个字符，不多于12个字符");
+                    }
+                }
+
+            });        
+            
+
+            $("#check2").focusout(function(){
+                
+                var p2 = $("#password2").val();
+                var c2 = $("#check2").val();
+
+                if( c2.length != 0){
+                    if( c2 != p2){
+                        alert("两次输入的密码不一致");
+                    }
+                }
+
+            });
+                
+        });
+        
+
+        
+        
+        function rgnow() {
+            var n2 = $("#name2").val();
+            var p2 = $("#password2").val();
+            var c2 = $("#check2").val();
+            var q2 = $("#question2").val();
+            var a2 = $("#answer2").val();
+            var i2 = $("#invitation2").val();
+            if(c2 != p2){
+                alert("两次输入的密码不一致");
+            }
+        }
+
+            
+        
+            $.ajax({
+                 type: "post",
+                 url: "http://analyzeillness.chinacloudsites.cn/backforMSS/Login",
+                 contentType: "application/json;charset=utf-8",
+                 data: JSON.stringify({
+                    Registerusername: n2,
+                    Registerpassword: p2,
+                    Registerquestion: q2,
+                    Registeranswer: a2,
+                    Registerinvitation: 12 
+                    }),
+                 dataType: "json",
+                 success: function(data) {
+                     if(data.code == 1){
+                         alert("注册成功");
+                     }
+                     else if(data.code == 2){
+                        alert("邀请码错误");
+                     }
+                     else{
+                         alert("注册失败，该账户已存在");
+                     }
+                 }
+             });
+        
+
+</script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">Register</div>
+        <form>
+            <ul>
+                <li>
+                    <div class="text">
+                        <span class="yonghu"></span><input type="text" placeholder="请输入用户名" id="name2">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="password">
+                        <span class="mima"></span><input type="password" placeholder="请输入密码" id="password2">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="check">
+                        <span class="mima"></span><input type="password" placeholder="请确认密码" id="check2">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="question">
+                        <span class="mima"></span><input type="text" placeholder="请输入密保问题" id="question2">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="answer">
+                        <span class="mima"></span><input type="text" placeholder="请输入问题答案" id="answer2">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="invitation">
+                        <span class="mima"></span><input type="text" placeholder="请输入邀请码" id="invitation2">
+                    </div>
+                </li>
+
+                <li>
+                    <a href="login.html">Go back to login</a>
+                </li>
+
+                <li>
+                    <input type="button" value="立即注册" onclick="rgnow()">
+                </li>
+            </ul>
+        </form>
+        <div class="footer">
+            <p>Microsoft Innovation Studio is dedicated to smart healthcare</p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

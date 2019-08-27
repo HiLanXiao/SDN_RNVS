@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>找回密码</title>
+    <link type="text/css" href="../css/forget.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    
+    
+    <script>
+        $(document).ready(function(){
+            $("#name3").focusout(function(){                
+                var n3 = $("#name3").val();
+                if(n3.length != 0){
+                    $.get("http://analyzeillness.chinacloudsites.cn/backforMSS/forget1",function(data){
+                        if(data.code == 0){
+                                alert("用户不存在");
+                            }
+                        else{
+                            $("#name3").val() = data.rquestion;
+                        }
+                    });
+                }
+            });              
+        });
+
+        function checkqu() {
+            var n3 = $("#name3").val();
+            var a3 = $("#answer3").val();
+            if( n3!='' && a3!= '' ){
+                $.ajax({
+                    type: "post",
+                    url: "http://analyzeillness.chinacloudsites.cn/backforMSS/checkqu",
+                    contentType: "application/json;charset=utf-8",
+                    data: JSON.stringify({
+                        Registerusername: n3,
+                        Registeranswer: a3,
+                        }),
+                    dataType: "json",
+                    success: function(data) {
+                        if(data.code == 0){
+                            alert("答案错误");
+                        }
+                        else if(data.code == 1){
+                            alert("正在为您跳到重置密码页面");
+                            wiondow.location.href = 'data.url';
+                        }
+                    }
+                });
+            }
+            else{
+                if( n3 == ''){
+                    alert("请输入用户名");
+                }
+                if( a3 == ''){
+                    alert("请输入密保答案");
+                }
+            }
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">Retrieve Password</div>
+        <form>
+            <ul>
+                <li>
+                    <div class="text">
+                        <span class="yonghu"></span><input type="text" placeholder="请输入用户名" id="name3">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="question">
+                        <span class="mima"></span><input type="text" id="question3">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="answer">
+                        <span class="mima"></span><input type="text" placeholder="请输入密保答案" id="answer3">
+                    </div>
+                </li>
+
+                <li>
+                    <a href="login.html">Go back to login</a>
+                </li>
+
+                <li>
+                    <input type="button" value="立刻找回" onclick="checkqu()">
+                </li>
+            </ul>
+        </form>
+        <div class="footer">
+            <p>Microsoft Innovation Studio is dedicated to smart healthcare</p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
