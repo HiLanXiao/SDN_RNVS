@@ -1,29 +1,8 @@
-# topo
+## 8-27更新
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- 大概是第一版了，存在问题如下：
+  - 背景图片需要调整
+  - 设备坐标和连线颜色宽度等需要调整
+  - 突然发现激活和停宕没有写确认。。主要还是因为后端接口没给出来
+  - 差的比较多的就是交互一块的代码，这个等之后魁哥写完再添加
+  - 可视化展示那块功能不完整，等待组员明确了功能再接着写
